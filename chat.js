@@ -1,23 +1,9 @@
-// Your web app's Firebase configuration
-//ADD YOUR FIREBASE LINKS HERE
+function Log_IN(){
 
+name_user = document.getElementById("user_name").value;
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+localStorage.setItem("User_name", name_user);
 
+window.location = "chat_room.html";
 
-function addUser()
-{
-    user_name = document.getElementById("user_name").value;
-    firebase.database().ref("/").child(user_name).update({
-        purpose : "adding user"
-    });
-    /*
-    localStorage.setItem("user_name", user_name);
-
-    window.location = "chat_room.html";
-    */
 }
-
-
-
